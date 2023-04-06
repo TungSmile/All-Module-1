@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="a"><button onclick="check()"></button>
+<script>
+    function check() {
+        let year =document.getElementById("a").value;
+        year = parseInt(year);
+        if (year % 4 == 0) {
+            if (year % 100 == 0 && year % 400 == 0)
+                alert("not nhuan")
+            else alert("nhuan")
+        } else alert("not nhuan")
+    }
+</script>
+
+</body>
+</html>

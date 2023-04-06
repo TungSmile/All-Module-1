@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:text-align="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<input type="text" id="a" placeholder="điền số thôi nhá" width=50px>  <input type="text" id="b"placeholder="điền số thôi nhá"width=50px>
+<br>
+<button onclick=cong() >Addition(+)</button>
+<button onclick=tru() >Subtraction(-)</button>
+<button onclick=nhan() >Multiplicantion(*)</button>
+<button onclick=chia() >Division(/)</button>
+<h1 id="ve"></h1>
+<script>
+  function cong(){
+    let x = +(document.getElementById("a").value);
+    let y = +(document.getElementById("b").value);
+    let ve1= document.getElementById("ve")
+    ve1.innerText=x+y;
+  }
+  function tru() {
+    let x = document.getElementById("a").value;
+    let y = document.getElementById("b").value;
+    document.writeln("Result Subtraction : " + (x-y));
+  }
+  function nhan(){
+    let x = document.getElementById("a").value;
+    let y = document.getElementById("b").value;
+    let z=x*y
+    document.writeln("Result Multiplicantion : " + (x*y));
+  }
+  function chia(){
+
+    let x = document.getElementById("a").value;
+    let y = document.getElementById("b").value;
+    document.writeln("Result Division : " + (x/y));
+  }
+</script>
+<br><br><br>
+<table style="border-color: black;background-color: gray">
+    <tr>
+        <td colspan="7"><input placeholder="0" width="130
+        %" id="dpl" ></td>
+    </tr><br>
+    <tr>
+        <td><button id="rad" value="Rad">Rad</button></td>
+        <td><button id="???" value="???">Rad</button></td>
+        <td><button id="x" value="x!">x!</button></td>
+        <td><button id="ngoacmo" value="ngoacmo">(</button></td>
+        <td><button id="ngoacdong" value="ngoacdong">)</button></td>
+        <td><button id="phantram" value="phantram">%</button></td>
+        <td><button id="ac" value="ac">AC</button></td>
+    </tr>
+    <tr>
+        <td><button id="inv" value="Rad">Inv</button></td>
+        <td><button id="sin" value="Rad">Sin</button></td>
+        <td><button id="in" value="Rad">In</button></td>
+        <td><button id="7" value=7>7</button></td>
+        <td><button id="8" value=8>8</button></td>
+        <td><button id="9" value=9>9</button></td>
+        <td><button id="chia" value=/ >/</button></td>
+    </tr>
+    <tr>
+        <td><button id="pi" value=3.14 ></button></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>

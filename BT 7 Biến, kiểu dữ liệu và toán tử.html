@@ -6,15 +6,54 @@
 </head>
 <body>
 <h1>Bài 1</h1>
+<p><button onclick=diem() value="a">tinh diem</button> </p>
 <script>
-    let toan =prompt("nhập điểm toán vào đây","?");
-    let hoa =prompt("nhập điểm hoa vao đây","?");
-    let ly = prompt("nhập điểm lý vào đây","?");
-    let tb = (toan+hoa+ly)/3;
-    tb= parseInt(tb);
+    function diem() {
+        let toan =prompt("nhập điểm toán vào đây","?");
+        let hoa =prompt("nhập điểm hoa vao đây","?");
+        let ly = prompt("nhập điểm lý vào đây","?");
+        let tb = (toan+hoa+ly)/3;
+        tb= parseInt(tb);
+        document.writeln("TB :"+tb);
+    }
+</script><br><br><br>
+<h1>Bài 2</h1>
+<p><label>Điền độ c</label><br>
+    <input id="doC" type="text" >
 
-    document.writeln("TB :"+tb);
-</script>
+    <button onclick=doi1() value="doi">Đổi</button>
+
+    <script>
+        function doi1() {
+            let c = document.getElementById("doC").value;
+            let f = 9/5*c+32;
+            document.writeln(f+" Độ F")
+        }
+        </script>
+<h1>Bài 3</h1>
+<p><label>Điền bán kính</label><br>
+    <input id="bk" type="text" >
+    <button onclick=tinh2() value="tinh" >Tính</button>
+    <script>
+        function tinh2() {
+            let pi=3.14;
+            let r = document.getElementById("bk").value;
+            let s = (r*r*pi);
+            document.writeln("Diện tích là "+s);
+        }
+    </script>
+<h1>Bài 4</h1>
+<p><label>Điền bán kính</label><br>
+    <input id="bk1" type="text" >
+    <button onclick=tinh3() value="tinh1" >Tính</button>
+    <script>
+        function tinh3() {
+            let pi=3.14;
+            let r = document.getElementById("bk1").value;
+            let c = (r*2*pi);
+            document.writeln("Chu vi là "+c);
+        }
+    </script>
 
 </body>
 </html>

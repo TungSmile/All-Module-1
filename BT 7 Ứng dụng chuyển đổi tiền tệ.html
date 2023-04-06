@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  <script src="function%20b6.js"></script>
 </head>
 <body>
-<input type="text" value="a">so
-<select>có
-  <option value="vn">vina</option>
-  <option value="dl">do</option>
+<input type="text" id="tien" placeholder="Điền Tiền">
+<select id="doi1">có
+  <option value="1">VietNam</option>
+  <option value="23000">USD</option>
 </select>
-<select>đổi
-  <option value="vn">vina</option>
-  <option value="dl">do</option>
+<select id="doi2">đổi
+  <option value="1">VietNam</option>
+  <option value="23000">USD</option>
 </select>
-<button type="button" onclick="ra;">
-  Convert
+<button type="button" onclick=ra()>Convert
 </button>
+<script>
+    function ra() {
+        let x= document.getElementById("tien").value;
+        let y= document.getElementById("doi1").value;
+        let z= document.getElementById("doi2").value;
+        document.writeln("Result: "+(x*y/z)+" VND");
+            }
+</script>
 </body>
 </html>
