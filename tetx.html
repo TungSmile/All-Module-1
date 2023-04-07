@@ -6,17 +6,15 @@
 </head>
 <body>
 <script>
-let a = 100
-let b =200
-switch (a){
-    case 100:
-        alert("a="+a)
-        break;
-        switch (b) {
-            case 200:
-                alert("b="+b)
-        }
-}
+    var a=parseFloat(prompt('diem'));
+    if (a>8)
+        alert("gioi");
+    else if(a>=6.5)
+        alert('kha');
+    else if(a>=4.5)
+        alert('tb')
+    else alert('yeu')
 </script>
+
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick=tim()>Bài 1</button><button onclick=tima()>Bài 2</button><button onclick=sosanh()>Bài 3</button>
+<script>
+function tim() {
+  let app = prompt("Enter browser name!")
+  switch (app) {
+    case 'Edge':
+      alert("You've got the Edge!");
+      break;
+    case 'Chrome':
+    case 'Firefox':
+    case 'Safari':
+    case 'Opera':
+      alert('Okay we support these browsers too');
+      break;
+    default:
+      alert('We hope that this page looks ok!');
+  }
+}
+  function tima(){
+  let a = prompt('a?', '');
+  switch (a) {
+    case '0':
+      alert(0);
+      break;
+    case '1':
+      alert(1);
+      break;
+    case '2':
+    case '3':
+      alert('2,3')
+      break;
+    default:
+      alert("ko")
+  }
+  }
+function sosanh() {
+  let c = +prompt("con số gì đây", "");
+  switch ((c>0)?1:(c<0)?-1:0){
+    case 1:
+      alert(1);
+      break;
+    case -1:
+      alert(-1);
+      break;
+    default:
+      alert(0)
+  }
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="moluon()">
+<img id="matcan" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" style="position: absolute;left:0; top:0;"height="100" width="80">
+<script>
+    var toado=document.getElementById("matcan");
+    function lenxuong(g) {
+        switch (g.keyCode) {
+            case 38 :
+                toado.style.top=parseInt(toado.style.top)-5+"px";
+                break;
+            case 40:
+                toado.style.top=parseInt(toado.style.top)+5+"px";
+                break;
+            case 37:
+                toado.style.left=parseInt(toado.style.left)+5+"px";
+                break;
+            case 39:
+                toado.style.left=parseInt(toado.style.left)-5+"px";
+                break;
+        }
+    }
+function moluon(){
+        window.addEventListener('keydown',lenxuong);
+}
+</script>
+
+</body>
+</html>
