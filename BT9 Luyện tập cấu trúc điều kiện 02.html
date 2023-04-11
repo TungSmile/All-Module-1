@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài Tập 1</h1>
+<input type="text" id="a1">
+<button onclick=bt1()>Đổi sang F</button>
+<br>
+<p id="srbt1"></p>
+<br>
+<h1>Bài Tập 2</h1>
+<input type="text" id="a2">
+<button onclick=bt2()>Đổi sang feet</button>
+<br>
+<p id="srbt2"></p>
+<br>
+<h1>Bài Tập 3</h1>
+<input type="text" id="a3">
+<button onclick=bt3()>Tính diện tích hình vuông</button>
+<br>
+<p id="srbt3"></p>
+<br>
+<h1>Bài Tập 4</h1>
+<input type="text" id="a4" placeholder="chiều dài"><input type="text" id="b4"placeholder="chiều rộng">
+<button onclick=bt4()>Tính diện tích hình Chữ Nhật</button>
+<br>
+<p id="srbt4"></p>
+<br>
+<h1>Bài Tập 5</h1>
+<input type="text" id="a5" placeholder="chiều dài"><input type="text" id="b5"placeholder="chiều rộng">
+<button onclick=bt5()>Tính diện tích tam giác vuông</button>
+<br>
+<p id="srbt5"></p>
+<br>
+<br>
+<h1>Bài Tập 6</h1>
+<input type="text" id="a6" placeholder="a"><input type="text" id="b6"placeholder="b">
+<button onclick=bt6()>Giải phương trình bậc 1</button>
+<br>
+<p id="srbt6"></p>
+<br>
+<br>
+<h1>Bài Tập 7</h1>
+<input type="text" id="a7" placeholder="a">
+<br>
+<input type="text" id="b7" placeholder="b">
+<br>
+<input type="text" id="c7" placeholder="c">
+<br>
+<button onclick=bt7()>Giải phương trình bậc 2</button>
+<br>
+<h1>Bài Tập 8</h1>
+<input type="text" id="a8" placeholder="age">
+<button onclick=bt8()>Check tuổi</button>
+<br>
+<h1>Bài Tập 9</h1>
+<input type="text" id="a9" placeholder="a">
+<br>
+<input type="text" id="b9" placeholder="b">
+<br>
+<input type="text" id="c9" placeholder="c">
+<br>
+<button onclick=bt9()>Check cạnh tam giác</button>
+<br>
+<h1>Bài Tập 10</h1>
+<input type="text" id="a10" placeholder="kWh">
+<button onclick=bt10()>Tính giá điện</button>
+<br>
+<p id="srbt10"></p>
+<br>
+<h1>Bài Tập 11</h1>
+<input type="text" id="a11" placeholder="Thu nhập">
+<button onclick=bt11()>Tính thuế thu nhập</button>
+<br>
+<p id="srbt11"></p>
+<br>
+<h1>Bài Tập 12</h1>
+<input type="text" id="a12" placeholder="Tiền gửi">
+<br>
+<input type="text" id="b12" placeholder="Lãi xuất ">
+<br>
+<input type="text" id="c12" placeholder="Nhập thời gian bằng tháng">
+<br>
+<button onclick=bt12()>Tính lãi</button>
+<br>
+<p>1 tháng 6% , 3 tháng 6% , 6 tháng 7,9%, 12 tháng 8,5%, 18 tháng 8,8%</p>
+<br>
+<p id="srbt12"></p>
+<script>
+    function bt12(){
+    let mo=(+document.getElementById("a12").value)/1000000;
+    let lai=(+document.getElementById("b12").value)/100;
+    let time=+document.getElementById("c12").value;
+    if (time <=3)
+        mo=mo+mo*lai*time;
+        else if (time<6)
+            mo=mo+mo*lai*time;
+
+    }
+    function bt11(){
+        let tn=+document.getElementById("a11").value;
+        tn=tn/1000000
+        let tax;
+        if (tn<5) tax=tn*5/100;
+        else if(tn<10) tax=tn*1/10-0.25;
+        else if(tn<18) tax=tn*15/100-0.75;
+        else if(tn<32) tax=tn*2/10-1.65;
+        else if(tn<52) tax=tn*1/4-3.25;
+        else if(tn<80) tax=tn*3/10-5.85;
+        else if(tn>80) tax=tn*35/100-9.85;
+        else alert("nhập sai");
+        document.getElementById("srbt11").innerHTML="Thuế phải trả" + tax*1000000 +"VND";
+    }
+    function bt10(){
+        let elec=+document.getElementById("a10").value;
+        let bill;
+        if (elec<=50)
+            bill=elec*1678;
+        else if (elec<=100)
+            bill=(elec-50)*1734+83900;
+        else if(elec<=200)
+            bill=(elec-100)*2014 + 170600;
+        else if(elec<=300)
+            bill=(elec-200)*2536 + 372000;
+        else if(elec<=400)
+            bill=(elec-300)*2834 + 625600;
+        else if(elec>400)
+            bill=(elec-400)+2927 + 909000;
+        else alert("nhập sai");
+        document.getElementById("srbt10").innerHTML =bill+bill/10+"VND"
+    }
+    function bt9() {
+        let a = +document.getElementById("a9").value;
+        let b = +document.getElementById("b9").value;
+        let c = +document.getElementById("c9").value;
+        if (a + b > c && b + c > a && a + c > b&& a > 0 && b > 0 && c > 0)
+            alert("a,b,c là cạnh tam giác");
+        else alert("a,b,c ko phải cạnh tam giác");
+
+    }function bt8(){
+        let age=+document.getElementById("a8").value;
+        if (age>0 && age <120) alert("Tuổi Người");
+        else alert("are u sure human?")
+    }
+    function bt7(){
+        let a=+document.getElementById("a7").value;
+        let b=+document.getElementById("b7").value;
+        let c=+document.getElementById("c7").value;
+        let deta= b^2-4*a*c;
+        if (a ==0 )
+        alert("dừng game");
+        else if (deta>0){
+            let x1=(-b+Math.sqrt(deta))/a;
+            let x2=(-b-Math.sqrt(deta))/a;
+        alert("2 Nghiệm của pt là "+x1+"&"+x2)}
+        else if (deta==0){
+            let x=-b/2*a;
+            alert("PT có nghiệm kép"+x);}
+        else if (deta<0) alert("PT vô nghiệm");
+        else alert("nhập sai")
+    }
+    function bt6() {
+        let a = +document.getElementById("a6").value;
+        let b = +document.getElementById("b6").value;
+        let x;
+        if (a==0 && b==0)
+            x = "vô số nghiệm";
+        else if (a==0 && b!==0)
+            x = " vô nghiệm";
+        else if (a!==0 && b==0)
+            x = -b/a;
+        document.getElementById("srbt6").innerHTML = "Nghiệm của pt là " + x;
+    }
+  function bt5() {
+    let a = +document.getElementById("a5").value;
+    let b = +document.getElementById("b5").value;
+    let c = (a + b) / 2;
+    document.getElementById("srbt5").innerHTML = "Diện tích tam giác vuông " + c;
+  }
+  function bt4() {
+    let a = +document.getElementById("a4").value;
+    let b = +document.getElementById("b4").value;
+    let c = (a + b) * 2;
+    document.getElementById("srbt4").innerHTML = "Diện tích hình Chữ nhật " + c;
+  }
+  function bt3() {
+    let a = +document.getElementById("a3").value;
+    let b = a*a;
+    document.getElementById("srbt3").innerHTML ="Diện tích hình vuông " + b ;
+  }
+  function bt2() {
+    let a = +document.getElementById("a2").value;
+    let b = a * 3.2808;
+    document.getElementById("srbt2").innerHTML = b + " Feet";
+  }
+  function bt1(){
+    let a1=+document.getElementById("a1").value;
+    let b1=a1*9/5-32;
+    document.getElementById("srbt1").innerHTML=b1+"*F";
+  }
+</script>
+</body>
+</html>

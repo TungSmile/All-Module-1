@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick=bt1()>BT1</button>
+<button onclick=bt2()>BT2</button>
+<script>
+  function bt2(){
+    let a2=1
+    for(;a2<100;){
+      a2++;
+      document.write("<hr width="+a2+"%>")
+    }
+  }
+  function bt1(){
+    let a1=+prompt("number");
+    let total=0;
+    while (a1!==-1){
+      total+=a1;
+      a1=+prompt("number");
+    }
+    alert(total);
+  }
+</script>
+</body>
+</html>

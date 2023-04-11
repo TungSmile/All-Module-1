@@ -5,15 +5,33 @@
     <title>Title</title>
 </head>
 <body>
+<input id="number" type="text" >
+<button onclick=t()>Tính</button>
+<br>
+<p id ="sr"></p>
+<br>
+<button onclick=cal()>Nhập tuổi</button>
 <script>
-    var a=parseFloat(prompt('diem'));
-    if (a>8)
-        alert("gioi");
-    else if(a>=6.5)
-        alert('kha');
-    else if(a>=4.5)
-        alert('tb')
-    else alert('yeu')
+    function cal(){
+        let age;
+        do {
+            age = +prompt("Tuổi");
+            if (age < 1 || age > 100) {
+                alert('again')}
+        }while (age < 1 || age > 100)
+        alert("done")
+    }
+
+    function t() {
+        var n = +document.getElementById("number").value;
+        var tong = 0;
+        var tich = 1;
+        for (let c = 1; c <= n; c++) {
+            tong += c;
+            tich *= c;
+            document.getElementById("sr").innerHTML = " tổng: " + tong + " tích: " + tich;
+        }
+    }
 </script>
 
 </body>

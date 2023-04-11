@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick=a()>bang</button>
+<script>
+  function a(){
+    let bang="<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    let b=1;
+    let c=1
+    while (b<=10){
+      bang=bang+"<tr>";
+      while (c<=10){
+        bang=bang+"<td>"+b*c+"</td>";
+      c++;}
+      bang=bang+"</tr>";
+      c=1;
+      b++;}
+    bang=bang+"</table>";
+    document.write(bang);
+  }
+
+</script>
+
+</body>
+</html>
