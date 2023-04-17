@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>BT1</h1>
+<button onclick="bt1()">BT1</button>
+<br>
+<h1>BT2</h1>
+<input type="text" id="inputno">
+<button onclick="bt2()">BT2</button>
+<br>
+<h1>BT3</h1>
+<button onclick="bt3()">BT3</button>
+<script>
+    function bt3() {
+        let paint = "<br>";
+        let x = 0;
+        while (x < 6) {
+            paint += "<br>";
+            let y = 0;
+            while (y < x + 1) {
+                y++;
+                paint += "*";
+            }
+            x++;
+        }
+        x = 0;
+        while (x < 6) {
+            paint += "<br>";
+            let y = 0;
+            while (x + y !== 6) {
+                y++;
+                paint += "*";
+            }
+            x++
+        }
+        x = 0;
+        while (x < 6) {
+            paint += "<br>";
+            let y = 0
+            while (x + y !== 6) {
+                y++;
+                paint += "&nbsp ";
+            }
+            for (let i = 0; i <x ; i++) {
+                paint += "*";
+            }
+            x++
+        }
+        x = 0;
+        while (x < 6) {
+            paint += "<br>";
+
+            for (let i = 0; i < x; i++) {
+                paint += "&nbsp ";
+            }
+            let y = 0
+            while (x + y !== 6) {
+                y++;
+                paint += "*";
+            }
+            x++
+        }
+        document.write(paint);
+    }
+
+
+
+
+
+
+    function bt2() {
+        let number = +document.getElementById("inputno").value;
+        let giaithua = 1;
+        for (let i = 1; i <= number; i++) {
+            giaithua = giaithua * i;
+        }
+        alert(giaithua);
+    }
+
+    function bt1() {
+        let a = 0;
+        let b = 1;
+        let c;
+        while (a < 13) {
+            c = a + b;
+            a = b;
+            b = c;
+            document.write(a + "<br>");
+        }
+    }
+
+</script>
+</body>
+</html>

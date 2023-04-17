@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>BT1</h1>
+<button onclick=bt1()>BT1</button>
+<br>
+<h1>BT2</h1>
+<button onclick=bt2()>BT2</button>
+<br>
+<h1>BT3</h1>
+<button onclick=bt3()>BT3</button>
+<br>
+<h1>BT4</h1>
+<button onclick=bt4()>BT4</button>
+<br>
+<h1>BT5</h1>
+<button onclick=bt5()>BT5</button>
+<br>
+<h1>BT6</h1>
+<button onclick=bt6()>BT6</button>
+<br>
+<h1>BT7</h1>
+<button onclick=bt7()>BT7</button>
+<br>
+<h1>BT8</h1>
+<button onclick=bt8()>choi</button>
+<script>
+    function bt8() {
+        let numbermin = +prompt("min");
+        let numbermax = +prompt("max");
+        let inputnumber;
+        let turn = 0
+        let numberrandom=parseInt((numbermax - numbermin + 1) * Math.random() + numbermin);
+        console.log(numberrandom);
+
+
+
+        while (turn < 3) {
+            inputnumber = +prompt("number");
+            turn++
+            if (inputnumber < numberrandom)
+                alert("nho qua them di");
+            else if (inputnumber > numberrandom)
+                alert("qua roi giam di");
+            else if (inputnumber == numberrandom) {
+                alert("chúc mừng");
+                break;
+            } else {(inputnumber < numbermin || inputnumber > numbermax);
+            alert("nhap lai di ma");}
+        }
+
+    }
+
+    function bt7() {
+        let a = 1
+        while (a < 101) {
+            if (a % 3 == 0 && a % 5 == 0)
+                document.write(a + " là FizzBuzz <br>");
+            else if (a % 3 == 0)
+                document.write(a + " là Fizz <br>");
+            else if (a % 5 == 0)
+                document.write(a + " là Buzz <br>");
+            a++;
+        }
+    }
+
+    function bt6() {
+        let cou = 0;
+        let a = 0;
+        let sum = 0;
+        while (cou < 30) {
+            if (a % 7 === 0) {
+                cou++;
+                sum += a;
+                document.write(a + "<br>");
+            }
+            a++;
+        }
+        document.write(sum);
+    }
+
+    function bt5() {
+        let cou = 0;
+        let a = 0;
+        let b = 1;
+        let c;
+        let sum = 0;
+        while (cou < 20) {
+            c = a + b;
+            a = b;
+            b = c;
+            cou++;
+            sum = sum + a
+        }
+        document.write(sum + "<br>");
+    }
+
+    function bt4() {
+        let cou = 0;
+        let a = 0;
+        let b = 1;
+        let c;
+        while (cou < 20) {
+            if (b % 5 == 0) {
+                document.write(b + "<br>");
+                break;
+            }
+            c = a + b;
+            a = b;
+            b = c;
+            cou++;
+        }
+    }
+
+    function bt3() {
+        let cou = 0;
+        let a = 0;
+        let b = 1;
+        let c;
+        while (cou < 20) {
+            c = a + b;
+            a = b;
+            b = c;
+            cou++;
+            document.write(a + "<br>");
+        }
+    }
+
+    function bt2() {
+        let nhietdo = Number(prompt("Nhập vào nhiệt độ"))
+        while (nhietdo < 20 || nhietdo > 100) {
+            if (nhietdo < 20) {
+                alert("Nhiệt độ quá lạnh")
+                nhietdo = Number(prompt("Nhập vào nhiệt độ"))
+            } else if (nhietdo > 100) {
+                alert("Nhiệt độ quá nóng")
+                nhietdo = Number(prompt("Nhập vào nhiệt độ"))
+            }
+        }
+        alert("Nhiệt độ bình thường")
+    }
+
+    function bt1() {
+        for (let i = 1; i < 101; i++) {
+            if (i == 99) alert("đã hoàn thành");
+            else alert(i)
+        }
+    }
+</script>
+</body>
+</html>

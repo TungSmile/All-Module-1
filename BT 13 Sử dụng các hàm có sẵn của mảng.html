@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick=join()>BT1</button>
+<button onclick=joineven()>BT2</button>
+<br>
+<button onclick=updown()>BT3</button>
+<input type="text" id="input">
+<p id="result"></p>
+<script>
+    function updown(){
+        let input=document.getElementById("input").value;
+        let array=input.toString();
+        let up=array.toUpperCase();
+        let low=array.toLowerCase();
+        let array2=[];
+        for (let i = 0; i < array.length; i++) {
+            if(up.indexOf(array[i]) ==-1)
+                array2.push(up[i]);
+            else if (low.indexOf(array[i]) ==-1)
+                array2.push(low[i]);
+            else array2.push(array[i]);
+        }
+        document.getElementById("result").innerText=array2.join();
+    }
+    function join() {
+        let myColor = ["Red", "Green", "White", "Black"];
+        myColor = myColor.join("-")
+        document.write(myColor);
+    }
+
+    function joineven() {
+        let number = [0, 2, 5, 4, 6, 8];
+        let number2=[];
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] % 2 == 0 && number[i - 1] % 2 == 0)
+                number2.push("-" + number[i])
+            else number2.push(number[i])
+        }
+
+        document.write(number2.join(""));
+    }
+</script>
+
+</body>
+</html>

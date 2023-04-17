@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="searchkey">
+<button onclick=show()>Tìm</button>
+<p id="priresult"></p>
+<script>
+    function show() {
+        let array = document.getElementById("searchkey").value;
+        let english = ["SUN", "MOON", "STAR", "TREE", "FIRE", "NUOC"];
+        let viet = [["mặt trời", "thái dương"], ["mặt trăng", "nguyệt"], ["ngôi sao", "tinh linh"], ["cây cối", "mộc"], ["lửa", "hỏa"], ["nước", "thủy"]];
+        let prin = false;
+        let result="";
+        let i = 0
+        for (; i < viet.length; i++) {
+            let j = 0;
+            for (; j < viet[i].length; j++) {
+                if (viet[i].indexOf(array) <=1){
+                    prin = true;
+                break;
+                }
+            }
+        }
+        if (prin) {
+            result=english[i];
+            document.getElementById("priresult").innerText = result;
+        alert(i)
+        }
+    }
+</script>
+</body>
+</html>

@@ -5,7 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-
+<button onclick=mutiplicationtable()>MakeTable</button>
+<script>
+    function mutiplicationtable(){
+        let table="<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+        let r=1;
+        let cell=2;
+        while (r<10){
+            table+="<tr>";
+            while (cell<=10){
+                table+="<td>"+cell+"x"+r+"="+cell*r+"</td>";
+                cell++;}
+            cell=2;
+            r++
+            table+="</tr>";}
+        table+="</table>";
+        document.write(table);
+    }
+</script>
 
 </body>
 </html>
